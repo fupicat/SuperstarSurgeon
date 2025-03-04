@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6pwrjj1admu8"]
+
+[ext_resource type="Texture2D" uid="uid://bortx0rai5w7c" path="res://balls/boom_bad2.png" id="2_wqke6"]
+[ext_resource type="Texture2D" uid="uid://c3777ad1oc68f" path="res://balls/boom_bad3.png" id="3_gxls3"]
+[ext_resource type="Texture2D" uid="uid://cp3e5hqwr0swd" path="res://balls/boom_bad4.png" id="4_5hn2j"]
+[ext_resource type="Texture2D" uid="uid://bch0k2mp7ak3y" path="res://balls/boom_bad5.png" id="5_d2d3r"]
+[ext_resource type="AudioStream" uid="uid://414ajbqyw11q" path="res://sfx/smoke.wav" id="6_tgqnj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6ip8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wqke6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gxls3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5hn2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d2d3r")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Root" type="Node2D"]
+z_index = 1
+
+[node name="Icon" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.0756757, 0.0756757)
+sprite_frames = SubResource("SpriteFrames_i6ip8")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_tgqnj")
+volume_db = -20.0
+autoplay = true
+
+[connection signal="animation_finished" from="Icon" to="." method="queue_free"]

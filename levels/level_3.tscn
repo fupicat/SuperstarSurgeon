@@ -1,0 +1,154 @@
+[gd_scene load_steps=7 format=3 uid="uid://dw10jdlm4qm1p"]
+
+[ext_resource type="Texture2D" uid="uid://cdlide342n4ck" path="res://platforms/blue_long.png" id="1_r4fwp"]
+[ext_resource type="PackedScene" uid="uid://by3e00oqjx70j" path="res://bumpers/bumper_circle.tscn" id="2_tscbv"]
+[ext_resource type="Script" uid="uid://ck71eh3yq1nic" path="res://devil/devil_assigner.gd" id="3_mopnp"]
+[ext_resource type="PackedScene" uid="uid://s3qt6ujuwiqr" path="res://devil/devil.tscn" id="4_rjaw6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3may6"]
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d8sd"]
+size = Vector2(819.633, 32)
+
+[node name="Level3" type="Node2D" groups=["level"]]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(195, 190)
+rotation = 0.179195
+physics_material_override = SubResource("PhysicsMaterial_3may6")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(-282.838, -1.09814)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="Icon2" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(-497.233, -0.881409)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="Icon3" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(146.107, -0.027832)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="Icon4" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(-68.4661, -0.795288)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-159.817, -3.05176e-05)
+shape = SubResource("RectangleShape2D_7d8sd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1303, 88)
+rotation = -0.242181
+physics_material_override = SubResource("PhysicsMaterial_3may6")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(-282.838, -1.09814)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="Icon2" type="Sprite2D" parent="StaticBody2D2"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(-497.233, -0.881409)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="Icon3" type="Sprite2D" parent="StaticBody2D2"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(146.107, -0.027832)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="Icon4" type="Sprite2D" parent="StaticBody2D2"]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(-68.4661, -0.795288)
+scale = Vector2(0.0896631, 0.0896631)
+texture = ExtResource("1_r4fwp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-191.228, -0.930893)
+shape = SubResource("RectangleShape2D_7d8sd")
+
+[node name="Bumper" parent="." instance=ExtResource("2_tscbv")]
+position = Vector2(624, 403)
+
+[node name="Bumper2" parent="." instance=ExtResource("2_tscbv")]
+position = Vector2(348, 555)
+
+[node name="Bumper3" parent="." instance=ExtResource("2_tscbv")]
+position = Vector2(180, 385)
+
+[node name="Bumper4" parent="." instance=ExtResource("2_tscbv")]
+position = Vector2(871, 555)
+
+[node name="Bumper5" parent="." instance=ExtResource("2_tscbv")]
+position = Vector2(1033, 387)
+
+[node name="Good" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+position = Vector2(297.5, 93)
+gizmo_extents = 35.6
+script = ExtResource("3_mopnp")
+devil = NodePath("../Devil")
+
+[node name="Good2" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+position = Vector2(1042.5, 591.5)
+gizmo_extents = 35.6
+script = ExtResource("3_mopnp")
+devil = NodePath("../Devil2")
+
+[node name="Good3" type="Marker2D" parent="." groups=["good_spawner"]]
+position = Vector2(909.5, 264.5)
+gizmo_extents = 35.6
+
+[node name="Good4" type="Marker2D" parent="." groups=["good_spawner"]]
+position = Vector2(342.5, 410)
+gizmo_extents = 35.6
+
+[node name="Bad" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(183, 267.5)
+gizmo_extents = 35.6
+
+[node name="Bad2" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(57.5, 515.5)
+gizmo_extents = 35.6
+
+[node name="Bad3" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(545.5, 311.5)
+gizmo_extents = 35.6
+
+[node name="Bad4" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(700.5, 92.5)
+gizmo_extents = 35.6
+
+[node name="Bad5" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(717.5, 529.5)
+gizmo_extents = 35.6
+
+[node name="Bad6" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(881, 407)
+gizmo_extents = 35.6
+
+[node name="Bad7" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(1090.5, 231.5)
+gizmo_extents = 35.6
+
+[node name="Bad8" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(139, 54)
+gizmo_extents = 35.6
+
+[node name="Devil" parent="." instance=ExtResource("4_rjaw6")]
+position = Vector2(1407, 574)
+
+[node name="Devil2" parent="." instance=ExtResource("4_rjaw6")]
+position = Vector2(-292, 452)

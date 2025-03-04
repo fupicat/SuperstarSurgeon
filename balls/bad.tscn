@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://1lx2fvugl3q8"]
+
+[ext_resource type="Script" uid="uid://byr2wnrcbuxtm" path="res://balls/shootable.gd" id="1_k3tfj"]
+[ext_resource type="Texture2D" uid="uid://wmgadtsqc6qb" path="res://balls/bad.png" id="2_8fyqj"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y8xnv"]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m3g2g"]
+radius = 29.5042
+
+[node name="Bad" type="RigidBody2D" groups=["bad"]]
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_y8xnv")
+script = ExtResource("1_k3tfj")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(5.96046e-08, 0)
+scale = Vector2(0.0702703, 0.0702703)
+texture = ExtResource("2_8fyqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("CircleShape2D_m3g2g")

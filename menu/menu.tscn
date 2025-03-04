@@ -1,0 +1,254 @@
+[gd_scene load_steps=14 format=3 uid="uid://d2w0ydu56snu8"]
+
+[ext_resource type="Texture2D" uid="uid://bty4vvtfb85kt" path="res://menu/fundo.png" id="1_1fc0s"]
+[ext_resource type="Script" uid="uid://dpvxy3yy6wrop" path="res://menu/menu.gd" id="1_dc7px"]
+[ext_resource type="Texture2D" uid="uid://baoceff80lyu2" path="res://menu/logo.png" id="2_koxqm"]
+[ext_resource type="Texture2D" uid="uid://5didrmt35ker" path="res://menu/play.png" id="3_sh6ws"]
+[ext_resource type="Texture2D" uid="uid://cd823f0b8e7rb" path="res://menu/instructions.png" id="4_groux"]
+[ext_resource type="AudioStream" uid="uid://rpf6cv2opofv" path="res://music/menuloop.ogg" id="5_nleud"]
+[ext_resource type="Texture2D" uid="uid://cwpnfnr0d186" path="res://menu/INSTRUÇÕES.png" id="6_fwkqm"]
+[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://Retroica.ttf" id="6_ut88m"]
+[ext_resource type="AudioStream" uid="uid://dx77jx6o2mt1j" path="res://sfx/bui.wav" id="8_yfyge"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a1bie"]
+font = ExtResource("6_ut88m")
+font_size = 32
+
+[sub_resource type="Animation" id="Animation_skp0e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Music:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_wyc1e"]
+resource_name = "fadeout"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Music:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -62.602]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_08fmx"]
+_data = {
+&"RESET": SubResource("Animation_skp0e"),
+&"fadeout": SubResource("Animation_wyc1e")
+}
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dc7px")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1fc0s")
+expand_mode = 1
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_koxqm")
+expand_mode = 1
+
+[node name="Play" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_sh6ws")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Main/Play"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 388.0
+offset_right = 259.0
+offset_bottom = 566.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Instructions" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_groux")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Main/Instructions"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 391.0
+offset_right = 465.0
+offset_bottom = 565.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -47.0
+offset_right = -19.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Better with sound"
+label_settings = SubResource("LabelSettings_a1bie")
+
+[node name="Instructions" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Instructions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_fwkqm")
+expand_mode = 1
+
+[node name="Return" type="TextureRect" parent="Instructions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Instructions/Return"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 487.0
+offset_right = 209.0
+offset_bottom = 614.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nleud")
+autoplay = true
+bus = &"Music"
+
+[node name="Button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_yfyge")
+volume_db = -10.272
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_08fmx")
+}

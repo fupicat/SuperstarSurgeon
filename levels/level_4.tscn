@@ -1,0 +1,161 @@
+[gd_scene load_steps=7 format=3 uid="uid://b21tkmmxnhj2c"]
+
+[ext_resource type="Script" uid="uid://ck71eh3yq1nic" path="res://devil/devil_assigner.gd" id="3_4hqyl"]
+[ext_resource type="Texture2D" uid="uid://dtnxvlpaod0cd" path="res://platforms/blue_short.png" id="3_p60ko"]
+[ext_resource type="PackedScene" uid="uid://bkbubpwgdl1ut" path="res://bumpers/bumper_triangle.tscn" id="4_k6c4y"]
+[ext_resource type="PackedScene" uid="uid://s3qt6ujuwiqr" path="res://devil/devil.tscn" id="4_r71pr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cuayf"]
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ehs1"]
+size = Vector2(29.6986, 29.6984)
+
+[node name="Level3" type="Node2D" groups=["level"]]
+
+[node name="Good" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+position = Vector2(295, 62)
+gizmo_extents = 35.6
+script = ExtResource("3_4hqyl")
+devil = NodePath("../Devil")
+
+[node name="Good2" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+position = Vector2(838, 454)
+gizmo_extents = 35.6
+script = ExtResource("3_4hqyl")
+devil = NodePath("../Devil2")
+
+[node name="Good3" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+position = Vector2(957, 310)
+gizmo_extents = 35.6
+script = ExtResource("3_4hqyl")
+devil = NodePath("../Devil3")
+
+[node name="Good4" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+position = Vector2(342.5, 410)
+gizmo_extents = 35.6
+script = ExtResource("3_4hqyl")
+devil = NodePath("../Devil4")
+
+[node name="Bad" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(183, 267.5)
+gizmo_extents = 35.6
+
+[node name="Bad2" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(352, 216)
+gizmo_extents = 35.6
+
+[node name="Bad3" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(584, 235)
+gizmo_extents = 35.6
+
+[node name="Devil" parent="." instance=ExtResource("4_r71pr")]
+position = Vector2(1407, 574)
+
+[node name="Devil2" parent="." instance=ExtResource("4_r71pr")]
+position = Vector2(-292, 452)
+
+[node name="Devil3" parent="." instance=ExtResource("4_r71pr")]
+position = Vector2(897, -214)
+
+[node name="Devil4" parent="." instance=ExtResource("4_r71pr")]
+position = Vector2(192, -214)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(139, 115)
+rotation = 0.785397
+scale = Vector2(1.34074, 1.34074)
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Node2D"]
+position = Vector2(82.2744, -24.2603)
+physics_material_override = SubResource("PhysicsMaterial_cuayf")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D6"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("3_p60ko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D6"]
+shape = SubResource("RectangleShape2D_3ehs1")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Node2D"]
+position = Vector2(212.382, -154.368)
+physics_material_override = SubResource("PhysicsMaterial_cuayf")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D7"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("3_p60ko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D7"]
+shape = SubResource("RectangleShape2D_3ehs1")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Node2D"]
+position = Vector2(336.833, -278.818)
+physics_material_override = SubResource("PhysicsMaterial_cuayf")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D8"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("3_p60ko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D8"]
+shape = SubResource("RectangleShape2D_3ehs1")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Node2D"]
+position = Vector2(455.627, -397.612)
+physics_material_override = SubResource("PhysicsMaterial_cuayf")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D9"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("3_p60ko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D9"]
+shape = SubResource("RectangleShape2D_3ehs1")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Node2D"]
+position = Vector2(216.601, -17.2439)
+physics_material_override = SubResource("PhysicsMaterial_cuayf")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D11"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("3_p60ko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D11"]
+shape = SubResource("RectangleShape2D_3ehs1")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Node2D"]
+position = Vector2(341.052, -141.695)
+physics_material_override = SubResource("PhysicsMaterial_cuayf")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D12"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("3_p60ko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D12"]
+shape = SubResource("RectangleShape2D_3ehs1")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Node2D"]
+position = Vector2(459.846, -260.488)
+physics_material_override = SubResource("PhysicsMaterial_cuayf")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D13"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("3_p60ko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D13"]
+shape = SubResource("RectangleShape2D_3ehs1")
+
+[node name="Bumper" parent="." instance=ExtResource("4_k6c4y")]
+position = Vector2(1021, 440)
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(133, 440)
+scale = Vector2(-1, 1)
+
+[node name="Bumper2" parent="Node2D2" instance=ExtResource("4_k6c4y")]

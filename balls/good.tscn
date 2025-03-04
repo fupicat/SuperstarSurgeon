@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvsdqttdyo12f"]
+
+[ext_resource type="Script" uid="uid://byr2wnrcbuxtm" path="res://balls/shootable.gd" id="1_tyd2o"]
+[ext_resource type="Texture2D" uid="uid://7mm33317c1ud" path="res://balls/good.png" id="2_xbxam"]
+[ext_resource type="Texture2D" uid="uid://c4yp1stuuy4by" path="res://balls/good_devil.png" id="3_e5h80"]
+[ext_resource type="AudioStream" uid="uid://b0vdtsgqcsn4v" path="res://sfx/haohahoa.wav" id="4_yia76"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y8xnv"]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sk0le"]
+radius = 33.0151
+
+[sub_resource type="Animation" id="Animation_hnxd2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_xbxam")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fuwx3"]
+resource_name = "devil_in"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_e5h80")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(2, 0.5, 1),
+"update": 0,
+"values": [Vector2(1.1875, 0.769231), Vector2(0.787879, 1.30769), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rrfsk"]
+resource_name = "devil_out"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_xbxam")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2),
+"transitions": PackedFloat32Array(2, 0.5, 1),
+"update": 0,
+"values": [Vector2(1.1875, 0.769231), Vector2(0.787879, 1.30769), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ecwb4"]
+_data = {
+&"RESET": SubResource("Animation_hnxd2"),
+&"devil_in": SubResource("Animation_fuwx3"),
+&"devil_out": SubResource("Animation_rrfsk")
+}
+
+[node name="Good" type="RigidBody2D" groups=["good"]]
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_y8xnv")
+script = ExtResource("1_tyd2o")
+good = true
+metadata/_edit_group_ = true
+
+[node name="Root" type="Node2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="Root"]
+scale = Vector2(0.0756757, 0.0756757)
+texture = ExtResource("2_xbxam")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sk0le")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ecwb4")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yia76")
+volume_db = -20.903

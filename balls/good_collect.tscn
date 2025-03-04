@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5hi4200ty1o0"]
+
+[ext_resource type="Texture2D" uid="uid://cassj5b3r5mmy" path="res://balls/ICONE-BOM-EXPLODINDO-1.png" id="1_3371i"]
+[ext_resource type="Texture2D" uid="uid://cmfns1dpqr4ie" path="res://balls/ICONE-BOM-EXPLODINDO-2.png" id="2_72tj5"]
+[ext_resource type="Texture2D" uid="uid://cpkx85225kh3t" path="res://balls/ICONE-BOM-EXPLODINDO-3.png" id="3_d5k0e"]
+[ext_resource type="Texture2D" uid="uid://dn41gkmx2kme5" path="res://balls/ICONE-BOM-EXPLODINDO-4.png" id="4_cthoq"]
+[ext_resource type="Texture2D" uid="uid://c4jlp3ht44fbq" path="res://balls/ICONE-BOM-EXPLODINDO-5.png" id="5_xyjyy"]
+[ext_resource type="Texture2D" uid="uid://ba2ijyx0xudju" path="res://balls/ICONE-BOM-EXPLODINDO-6.png" id="6_3aue7"]
+[ext_resource type="Texture2D" uid="uid://caplxchlno3ic" path="res://balls/ICONE-BOM-EXPLODINDO-7.png" id="7_k1m5n"]
+[ext_resource type="AudioStream" uid="uid://bmdlm61rb23l4" path="res://sfx/collect.wav" id="8_siugl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tw5ui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3371i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_72tj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d5k0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cthoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xyjyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3aue7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k1m5n")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Root" type="Node2D"]
+z_index = 1
+
+[node name="Icon" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.0756757, 0.0756757)
+sprite_frames = SubResource("SpriteFrames_tw5ui")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_siugl")
+volume_db = -13.334
+autoplay = true
+
+[connection signal="animation_finished" from="Icon" to="." method="queue_free"]

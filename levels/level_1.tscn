@@ -1,0 +1,233 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvyvyjt217h1g"]
+
+[ext_resource type="Texture2D" uid="uid://dtnxvlpaod0cd" path="res://platforms/blue_short.png" id="1_2cp40"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w0i22"]
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dust"]
+size = Vector2(29.6986, 29.6984)
+
+[node name="Level3" type="Node2D" groups=["level"]]
+
+[node name="Good" type="Marker2D" parent="." groups=["good_spawner"]]
+position = Vector2(544, 41)
+gizmo_extents = 35.6
+
+[node name="Good2" type="Marker2D" parent="." groups=["good_spawner"]]
+position = Vector2(922, 124)
+gizmo_extents = 35.6
+
+[node name="Good3" type="Marker2D" parent="." groups=["good_spawner"]]
+position = Vector2(234, 106)
+gizmo_extents = 35.6
+
+[node name="Bad" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(154, 334)
+gizmo_extents = 35.6
+
+[node name="Bad2" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(583, 304)
+gizmo_extents = 35.6
+
+[node name="Bad3" type="Marker2D" parent="." groups=["bad_spawner"]]
+position = Vector2(1014, 318)
+gizmo_extents = 35.6
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(129, 194)
+rotation = 0.785397
+scale = Vector2(1.34074, 1.34074)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-61.1783, -34.8084)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D"]
+position = Vector2(68.9295, -164.916)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D2"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D"]
+position = Vector2(193.38, -289.367)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D3"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Node2D"]
+position = Vector2(312.174, -408.16)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D4"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Node2D"]
+position = Vector2(430.969, -526.954)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D5"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D5"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Node2D"]
+position = Vector2(82.2744, -24.2603)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D6"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D6"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Node2D"]
+position = Vector2(212.382, -154.368)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D7"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D7"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Node2D"]
+position = Vector2(336.833, -278.818)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D8"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D8"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Node2D"]
+position = Vector2(455.627, -397.612)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D9"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D9"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Node2D"]
+position = Vector2(216.601, -17.2439)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D11"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D11"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Node2D"]
+position = Vector2(341.052, -141.695)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D12"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D12"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Node2D"]
+position = Vector2(459.846, -260.488)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D13"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D13"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="Node2D"]
+position = Vector2(229.946, 123.412)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D15"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D15"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="Node2D"]
+position = Vector2(360.054, -6.69572)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D16"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D16"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Node2D"]
+position = Vector2(484.505, -131.146)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D17"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D17"]
+shape = SubResource("RectangleShape2D_2dust")
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="Node2D"]
+position = Vector2(603.299, -249.94)
+physics_material_override = SubResource("PhysicsMaterial_w0i22")
+
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D18"]
+modulate = Color(1, 1, 1, 0.466667)
+scale = Vector2(0.0687952, 0.0782863)
+texture = ExtResource("1_2cp40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D18"]
+shape = SubResource("RectangleShape2D_2dust")
