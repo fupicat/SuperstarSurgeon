@@ -11,6 +11,9 @@ config_version=5
 [application]
 
 config/name="Superstar Surgeon: a Sensitive Subject"
+config/name_localized={
+"pt_BR": "Cirurgião 5 Estrelas: um Assunto Sensível"
+}
 run/main_scene="res://menu/menu.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -32,10 +35,34 @@ restart={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":82,"physical_keycode":0,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
 ]
 }
+fullscreen={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194342,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translation_remaps={
+"res://menu/INSTRUÇÕES.png": PackedStringArray("res://menu/INSTRUÇÕES.pt.png:pt_BR"),
+"res://menu/logo.png": PackedStringArray("res://menu/logo.pt.png:pt_BR"),
+"res://vocals/bad1.ogg": PackedStringArray("res://vocals/bad1.pt.ogg:pt_BR"),
+"res://vocals/bad2.ogg": PackedStringArray("res://vocals/bad2.pt.ogg:pt_BR"),
+"res://vocals/bad3.ogg": PackedStringArray("res://vocals/bad3.pt.ogg:pt_BR"),
+"res://vocals/bad4.ogg": PackedStringArray("res://vocals/bad4.pt.ogg:pt_BR"),
+"res://vocals/good1.ogg": PackedStringArray("res://vocals/good1.pt.ogg:pt_BR"),
+"res://vocals/good2.ogg": PackedStringArray("res://vocals/good2.pt.ogg:pt_BR"),
+"res://vocals/good3.ogg": PackedStringArray("res://vocals/good3.pt.ogg:pt_BR"),
+"res://vocals/good4.ogg": PackedStringArray("res://vocals/good4.pt.ogg:pt_BR")
+}
+locale/translations=PackedStringArray("res://translation.en.translation", "res://translation.pt.translation")
+locale/language_filter=["pt"]
+locale/country_filter=["BR"]
+locale/locale_filter_mode=1
 
 [layer_names]
 

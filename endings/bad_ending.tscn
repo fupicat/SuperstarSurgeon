@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dxxfjv7dknxrm" path="res://endings/ending.gd" id="1_6fh0k"]
 [ext_resource type="Texture2D" uid="uid://c1rdxgfgftkim" path="res://endings/FINAL-TRISTE.png" id="2_vbs4k"]
 [ext_resource type="AudioStream" uid="uid://c3ubc4l8wlfi6" path="res://music/endingloop.ogg" id="3_levno"]
-[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://Retroica.ttf" id="3_tqkgh"]
+[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://CalSans-Regular.ttf" id="3_tqkgh"]
 
 [sub_resource type="Gradient" id="Gradient_h6rm3"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
@@ -12,6 +12,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 gradient = SubResource("Gradient_h6rm3")
 
 [sub_resource type="LabelSettings" id="LabelSettings_cis2a"]
+paragraph_spacing = -8.0
 font = ExtResource("3_tqkgh")
 font_size = 34
 
@@ -188,19 +189,7 @@ offset_top = -269.0
 offset_right = 552.0
 offset_bottom = 269.0
 grow_vertical = 2
-text = "Your patients loved one
-is at their lowest point.
-
-Your psychotic rambles have
-done all to guarantee that
-they will suffer for a long,
-excruciating time.
-
-
-
-
-Things were bad enough,
-you monster."
+text = "END_BAD"
 label_settings = SubResource("LabelSettings_cis2a")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -214,9 +203,9 @@ pitch_scale = 0.71
 bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "in"
 libraries = {
-"": SubResource("AnimationLibrary_dkvep")
+&"": SubResource("AnimationLibrary_dkvep")
 }
+autoplay = "in"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="back_to_menu"]

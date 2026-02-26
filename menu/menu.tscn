@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2w0ydu56snu8"]
+[gd_scene load_steps=20 format=3 uid="uid://d2w0ydu56snu8"]
 
 [ext_resource type="Texture2D" uid="uid://bty4vvtfb85kt" path="res://menu/fundo.png" id="1_1fc0s"]
 [ext_resource type="Script" uid="uid://dpvxy3yy6wrop" path="res://menu/menu.gd" id="1_dc7px"]
@@ -7,12 +7,22 @@
 [ext_resource type="Texture2D" uid="uid://cd823f0b8e7rb" path="res://menu/instructions.png" id="4_groux"]
 [ext_resource type="AudioStream" uid="uid://rpf6cv2opofv" path="res://music/menuloop.ogg" id="5_nleud"]
 [ext_resource type="Texture2D" uid="uid://cwpnfnr0d186" path="res://menu/INSTRUÇÕES.png" id="6_fwkqm"]
-[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://Retroica.ttf" id="6_ut88m"]
+[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://CalSans-Regular.ttf" id="6_ut88m"]
+[ext_resource type="Texture2D" uid="uid://vibxiipgavsf" path="res://menu/Brazil.png" id="7_iesyu"]
+[ext_resource type="Script" uid="uid://c6xpiyl54lnr5" path="res://menu/language_butt.gd" id="8_iuxab"]
 [ext_resource type="AudioStream" uid="uid://dx77jx6o2mt1j" path="res://sfx/bui.wav" id="8_yfyge"]
+[ext_resource type="Texture2D" uid="uid://d1fyemx8buwsn" path="res://menu/US.png" id="9_dmxns"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6fswf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bc54p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a1bie"]
+paragraph_spacing = -8.0
 font = ExtResource("6_ut88m")
 font_size = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iesyu"]
 
 [sub_resource type="Animation" id="Animation_skp0e"]
 length = 0.001
@@ -154,6 +164,7 @@ offset_top = 388.0
 offset_right = 259.0
 offset_bottom = 566.0
 mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6fswf")
 flat = true
 
 [node name="Instructions" type="TextureRect" parent="Main"]
@@ -174,6 +185,7 @@ offset_top = 391.0
 offset_right = 465.0
 offset_bottom = 565.0
 mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bc54p")
 flat = true
 
 [node name="Label" type="Label" parent="Main"]
@@ -183,14 +195,57 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -262.0
+offset_left = -432.0
 offset_top = -47.0
 offset_right = -19.0
 offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Better with sound"
+text = "SOUND"
 label_settings = SubResource("LabelSettings_a1bie")
+horizontal_alignment = 2
+
+[node name="PT" type="TextureButton" parent="Main"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 16.0
+offset_right = -24.0
+offset_bottom = 94.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_iesyu")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_iuxab")
+language = "pt"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Main/PT"]
+stream = ExtResource("8_yfyge")
+volume_db = -10.272
+
+[node name="EN" type="TextureButton" parent="Main"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -190.0
+offset_top = 16.0
+offset_right = -112.0
+offset_bottom = 94.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_dmxns")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_iuxab")
+language = "en"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Main/EN"]
+stream = ExtResource("8_yfyge")
+volume_db = -10.272
 
 [node name="Instructions" type="Control" parent="."]
 visible = false
@@ -227,6 +282,7 @@ offset_top = 487.0
 offset_right = 209.0
 offset_bottom = 614.0
 mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iesyu")
 flat = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

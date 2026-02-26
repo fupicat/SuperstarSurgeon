@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cx4ocu6esuo0p" path="res://music.gd" id="1_t7eku"]
 [ext_resource type="AudioStream" uid="uid://cujot8tt1joe" path="res://music/phase1.ogg" id="2_g4md4"]
 [ext_resource type="Script" uid="uid://br7yxujej4040" path="res://background.gd" id="3_k7rkh"]
+[ext_resource type="FontFile" uid="uid://b5sv52np2iqdi" path="res://Arial.ttf" id="4_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://dvbcji8301vl" path="res://fundo.png" id="5_xvf8g"]
 [ext_resource type="Texture2D" uid="uid://djxrqw8oheoor" path="res://doctor/doctor_new_good1.png" id="6_kw5k8"]
 [ext_resource type="Texture2D" uid="uid://3lvn47adcqfw" path="res://girl/girl_good.png" id="7_5urks"]
@@ -312,11 +313,8 @@ _data = {
 &"to_hospital": SubResource("Animation_e3mhf")
 }
 
-[sub_resource type="SystemFont" id="SystemFont_k5ori"]
-font_names = PackedStringArray("Arial")
-
 [sub_resource type="LabelSettings" id="LabelSettings_8k0xb"]
-font = SubResource("SystemFont_k5ori")
+font = ExtResource("4_0n3wm")
 font_size = 40
 font_color = Color(1, 0.913725, 0, 1)
 outline_size = 16
@@ -423,7 +421,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.3, 1.9, 4.1, 6, 8, 8.4, 10.6, 12.4, 12.8, 14.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Um this is awkward...", "I have some news for you.", "Your loved one was in surgery", "and we tried to pull them through.", "", "But something went a bit wrong", "and I have to confess...", "", "I made some mistakes", "and caused one big mess."]
+"values": ["BAD1_1", "BAD1_2", "BAD1_3", "BAD1_4", "", "BAD1_5", "BAD1_6", "", "BAD1_7", "BAD1_8"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -526,7 +524,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.2, 1.9, 4.1, 6, 8.5, 10.6, 12.8, 14.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Sorry to say this", "but there's nothing I can do...", "Your loved one fought so bravely", "but they couldn't make it through...", "I know this is the worst news", "that you could ever hear", "but I want you to know", "that they had no fear!"]
+"values": ["GOOD1_1", "GOOD1_2", "GOOD1_3", "GOOD1_4", "GOOD1_5", "GOOD1_6", "GOOD1_7", "GOOD1_8"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -629,7 +627,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.3, 1.9, 4.1, 6.2, 8.2, 8.5, 10.6, 12.6, 12.9, 14.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["I was distracted", "while looking at my phone", "and accidentally cut", "an artery that was prone.", "", "The blood then started gushing", "and sprayed all over me", "", "I slipped on the floor", "and hit my head on the IV!"]
+"values": ["BAD2_1", "BAD2_2", "BAD2_3", "BAD2_4", "", "BAD2_5", "BAD2_6", "", "BAD2_7", "BAD2_8"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -732,7 +730,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1.9, 4.1, 6, 8.5, 10.6, 12.8, 14.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Wish I had a miracle", "to bring them back to life", "but sometimes fate is cruel", "and it cuts you like a knife...", "I hope you find some comfort", "in the memories you shared.", "They'll always be with you", "and they always care!"]
+"values": ["GOOD2_1", "GOOD2_2", "GOOD2_3", "GOOD2_4", "GOOD2_5", "GOOD2_6", "GOOD2_7", "GOOD2_8"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -835,7 +833,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.3, 3, 4.7, 5.1, 8.2, 8.5, 11.7, 13.5, 13.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["I'm so so sorry...", "...please don't sue...", "", "...or report me to the board...", "", "I'll pay for the casket", "just for you!", "", "That's more than I can afford..."]
+"values": ["BAD3_1", "BAD3_2", "", "BAD3_3", "", "BAD3_4", "BAD3_5", "", "BAD3_6"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -938,7 +936,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.3, 3.6, 4.8, 5.2, 7.9, 8.2, 11.7, 13.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Just know you're not alone", "in this grief!", "", "Whenever you need a friend", "", "Be sure there's always someone", "looking out", "for you, to lend a hand!"]
+"values": ["GOOD3_1", "GOOD3_2", "", "GOOD3_3", "", "GOOD3_4", "GOOD3_5", "GOOD3_6"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1041,7 +1039,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1.9, 3.9, 4.1, 6, 8.2, 9, 10.4, 12.6, 12.8, 14.4, 16.8, 19.6, 20, 20.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["When I saw the monitor", "displaying the flatline", "", "I tried to revive them", "but I ran out of time...", "", "I can imagine", "it must suck to be alone...", "", "...but now that it's done", "I guess you can go home!", "", "Um...", "", "Bye!"]
+"values": ["BAD4_1", "BAD4_2", "", "BAD4_3", "BAD4_4", "", "BAD4_5", "BAD4_6", "", "BAD4_7", "BAD4_8", "", "BAD4_9", "", "BAD4_10"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1144,7 +1142,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1.9, 3.8, 4.1, 6, 8.1, 8.5, 10.6, 12.5, 12.8, 14.6, 16.8, 17.2, 19),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Best part is remembering", "how they made you smile and laugh!", "", "You'll always get to cherish", "all the moments that you had!", "", "I'm sure that you will honor", "their legacy and name", "", "The best part is loving them", "even through the pain.", "", "The best part is knowing that", "they feel the same!"]
+"values": ["GOOD4_1", "GOOD4_2", "", "GOOD4_3", "GOOD4_4", "", "GOOD4_5", "GOOD4_6", "", "GOOD4_7", "GOOD4_8", "", "GOOD4_9", "GOOD4_10"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1442,10 +1440,10 @@ bg_color = Color(0.482353, 0.556863, 0.956863, 1)
 script = ExtResource("1_foqxp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "intro"
 libraries = {
-"": SubResource("AnimationLibrary_xa5k7")
+&"": SubResource("AnimationLibrary_xa5k7")
 }
+autoplay = "intro"
 
 [node name="Music" type="Node" parent="."]
 unique_name_in_owner = true
@@ -1501,7 +1499,7 @@ texture = ExtResource("6_kw5k8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Doctor"]
 libraries = {
-"": SubResource("AnimationLibrary_xmtm4")
+&"": SubResource("AnimationLibrary_xmtm4")
 }
 
 [node name="LovedOne" type="Node2D" parent="Background"]
@@ -1515,10 +1513,10 @@ texture = ExtResource("7_aembt")
 
 [node name="MusicSections" type="AnimationPlayer" parent="Background"]
 unique_name_in_owner = true
-speed_scale = 2.0
 libraries = {
-"": SubResource("AnimationLibrary_6rdvm")
+&"": SubResource("AnimationLibrary_6rdvm")
 }
+speed_scale = 2.0
 
 [node name="Vocals" type="AudioStreamPlayer" parent="Background"]
 unique_name_in_owner = true
@@ -1573,7 +1571,7 @@ collide_with_areas = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Game/LaserGun"]
 libraries = {
-"": SubResource("AnimationLibrary_64vht")
+&"": SubResource("AnimationLibrary_64vht")
 }
 
 [node name="Shoot" type="AnimatedSprite2D" parent="Game/LaserGun"]

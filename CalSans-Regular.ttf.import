@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c7nkeldlt36om"
-path="res://.godot/imported/Retroica.ttf-a6403796338750614e2191cb2a4c3db2.fontdata"
+path="res://.godot/imported/CalSans-Regular.ttf-3d9721d3fd35a2ddf0e8b4b8dab5c960.fontdata"
 
 [deps]
 
-source_file="res://Retroica.ttf"
-dest_files=["res://.godot/imported/Retroica.ttf-a6403796338750614e2191cb2a4c3db2.fontdata"]
+source_file="res://CalSans-Regular.ttf"
+dest_files=["res://.godot/imported/CalSans-Regular.ttf-3d9721d3fd35a2ddf0e8b4b8dab5c960.fontdata"]
 
 [params]
 

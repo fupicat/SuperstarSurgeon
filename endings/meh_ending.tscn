@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dxxfjv7dknxrm" path="res://endings/ending.gd" id="1_ygby6"]
 [ext_resource type="Texture2D" uid="uid://c6hn8umgc56m2" path="res://endings/FINAL-MÉH.png" id="2_qyfjo"]
 [ext_resource type="AudioStream" uid="uid://c3ubc4l8wlfi6" path="res://music/endingloop.ogg" id="3_8s82m"]
-[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://Retroica.ttf" id="3_lhpgg"]
+[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://CalSans-Regular.ttf" id="3_lhpgg"]
 
 [sub_resource type="Gradient" id="Gradient_h6rm3"]
 colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
@@ -12,6 +12,7 @@ colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
 gradient = SubResource("Gradient_h6rm3")
 
 [sub_resource type="LabelSettings" id="LabelSettings_cis2a"]
+paragraph_spacing = -8.0
 font = ExtResource("3_lhpgg")
 font_size = 34
 
@@ -189,24 +190,12 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -552.0
+offset_left = -571.0
 offset_top = -269.0
 offset_bottom = 269.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Your patients loved one
-was more confused by
-your attempts at
-empathy than anything.
-
-Im sure they will manage 
-to get through this
-eventually.
-
-
-
-Its a difficult time,
-let them be."
+text = "END_MEH"
 label_settings = SubResource("LabelSettings_cis2a")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -220,9 +209,9 @@ pitch_scale = 0.92
 bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "in"
 libraries = {
-"": SubResource("AnimationLibrary_dkvep")
+&"": SubResource("AnimationLibrary_dkvep")
 }
+autoplay = "in"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="back_to_menu"]

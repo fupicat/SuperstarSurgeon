@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bcv78gl6blx0d" path="res://endings/FINAL-BOM.png" id="1_cf638"]
 [ext_resource type="Script" uid="uid://dxxfjv7dknxrm" path="res://endings/ending.gd" id="1_jgxhp"]
 [ext_resource type="AudioStream" uid="uid://c3ubc4l8wlfi6" path="res://music/endingloop.ogg" id="2_2tp38"]
-[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://Retroica.ttf" id="3_pqv3n"]
+[ext_resource type="FontFile" uid="uid://c7nkeldlt36om" path="res://CalSans-Regular.ttf" id="3_pqv3n"]
 
 [sub_resource type="Gradient" id="Gradient_h6rm3"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
@@ -12,6 +12,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 gradient = SubResource("Gradient_h6rm3")
 
 [sub_resource type="LabelSettings" id="LabelSettings_cis2a"]
+paragraph_spacing = -8.0
 font = ExtResource("3_pqv3n")
 font_size = 34
 
@@ -182,19 +183,7 @@ offset_left = 57.0
 offset_top = 55.0
 offset_right = 635.0
 offset_bottom = 593.0
-text = "Your patients loved one
-is doing as well as they could be.
-
-While the hurt of loss still lingers,
-your comforting words have
-aided in the healing of the soul.
-
-
-
-
-
-Eventually...
-its gonna be ok."
+text = "END_GOOD"
 label_settings = SubResource("LabelSettings_cis2a")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -207,9 +196,9 @@ stream = ExtResource("2_2tp38")
 bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "in"
 libraries = {
-"": SubResource("AnimationLibrary_dkvep")
+&"": SubResource("AnimationLibrary_dkvep")
 }
+autoplay = "in"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="back_to_menu"]

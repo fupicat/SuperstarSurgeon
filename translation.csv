@@ -1,0 +1,141 @@
+keys,en,pt
+SOUND,F11 = Fullscreen. Better with sound!,F11 = Tela cheia. Jogue com som!
+BAD1_1,Um this is awkward...,Como é que eu conto essa
+BAD1_2,I have some news for you.,notícia pra você?
+BAD1_3,Your loved one was in surgery,O seu ente querido
+BAD1_4,and we tried to pull them through.,ele acabou de morrer.
+BAD1_5,But something went a bit wrong,Vou confessar meus erros
+BAD1_6,and I have to confess...,pois eu sou profissional
+BAD1_7,I made some mistakes,nessa cirurgia
+BAD1_8,and caused one big mess.,que se tornou fatal.
+BAD2_1,I was distracted,Bem distraído
+BAD2_2,while looking at my phone,eu olhava o celular
+BAD2_3,and accidentally cut,e cortei uma artéria
+BAD2_4,an artery that was prone.,que não era pra cortar.
+BAD2_5,The blood then started gushing,O sangue que jorrava
+BAD2_6,and sprayed all over me,se espalhava pelo chão
+BAD2_7,I slipped on the floor,e eu escorreguei
+BAD2_8,and hit my head on the IV!,enquanto media sua pressão!
+BAD3_1,I'm so so sorry...,Por favor não me põe no tribunal!
+BAD3_2,...please don't sue...,Por favor não me põe no tribunal!
+BAD3_3,...or report me to the board...,Em troca eu vou te ajudar...
+BAD3_4,I'll pay for the casket,Deixa que eu banco
+BAD3_5,just for you!,o seu funeral!
+BAD3_6,That's more than I can afford...,Se eu conseguir pagar…
+BAD4_1,When I saw the monitor,Quando eu vi que ele
+BAD4_2,displaying the flatline,ficou sem sinais vitais
+BAD4_3,I tried to revive them,eu tentei revivê-lo
+BAD4_4,but I ran out of time...,mas era tarde demais.
+BAD4_5,I can imagine,Que pena mesmo
+BAD4_6,it must suck to be alone...,que ele teve que partir...
+BAD4_7,...but now that it's done,"Mas fazer o quê, né?"
+BAD4_8,I guess you can go home!,"Agora, pode sair!"
+BAD4_9,Um...,Uh...
+BAD4_10,Bye!,Tchau!
+GOOD1_1,Sorry to say this,Eu sinto muito  
+GOOD1_2,but there's nothing I can do...,não tem mais o que fazer
+GOOD1_3,Your loved one fought so bravely,fizemos o possível
+GOOD1_4,but they couldn't make it through...,mas ele veio a falecer.
+GOOD1_5,I know this is the worst news,O seu ente querido
+GOOD1_6,that you could ever hear,que lutou até o fim
+GOOD1_7,but I want you to know,não ia querer
+GOOD1_8,that they had no fear!,que você sofresse assim!
+GOOD2_1,Wish I had a miracle,O universo
+GOOD2_2,to bring them back to life,pode ser um mau algoz
+GOOD2_3,but sometimes fate is cruel,decidindo o destino
+GOOD2_4,and it cuts you like a knife...,que ele guarda para nós.
+GOOD2_5,I hope you find some comfort,Encontre algum conforto
+GOOD2_6,in the memories you shared.,nas memórias de vocês
+GOOD2_7,They'll always be with you,e ele sempre estará com
+GOOD2_8,and they always care!,você mais uma vez!
+GOOD3_1,Just know you're not alone,Se o seu coração estiver apertado
+GOOD3_2,in this grief!,Se o seu coração estiver apertado
+GOOD3_3,Whenever you need a friend,quando pensar que está só
+GOOD3_4,Be sure there's always someone,sempre vai ter um alguém do seu lado
+GOOD3_5,looking out,sempre vai ter um alguém do seu lado
+GOOD3_6,"for you, to lend a hand!",buscando o seu melhor!
+GOOD4_1,Best part is remembering,O bom é preservar
+GOOD4_2,how they made you smile and laugh!,o que ele fez você sentir
+GOOD4_3,You'll always get to cherish,pois são esses momentos
+GOOD4_4,all the moments that you had!,que levamos por aí.
+GOOD4_5,I'm sure that you will honor,É em sua memória
+GOOD4_6,their legacy and name,que você irá viver.
+GOOD4_7,The best part is loving them,O bom é amar não importa quanto doer.
+GOOD4_8,even through the pain.,O bom é amar não importa quanto doer.
+GOOD4_9,The best part is knowing that,O bom é saber que ele ainda ama você!
+GOOD4_10,they feel the same!,O bom é saber que ele ainda ama você!
+END_BAD,"Your patient's loved one
+is at their lowest point.
+
+Your psychotic rambles have
+done all to guarantee that
+they will suffer for a long,
+excruciating time.
+
+
+
+
+Things were bad enough,
+you monster.","O ente querido de seu
+paciente está no seu
+pior momento.
+
+Seu monólogo psicótico
+garantiu que ele sofrerá
+por muito, muito tempo.
+
+
+
+
+Não precisava fazer isso,
+seu monstro."
+END_GOOD,"Your patient's loved one
+is doing as well as they could be.
+
+While the hurt of loss still lingers,
+your comforting words have
+aided in the healing of the soul.
+
+
+
+
+
+Eventually...
+its gonna be ok.","O ente querido de seu
+paciente está se
+recuperando da melhor
+forma possível.
+
+Embora a dor da perda
+ainda persista, suas
+palavras de conforto
+ajudaram na cura da alma.
+
+
+Eventualmente...
+tudo vai ficar bem."
+END_MEH,"Your patient's loved one
+was more confused by
+your attempts at
+empathy than anything.
+
+I'm sure they will manage 
+to get through this
+eventually.
+
+
+
+It's a difficult time,
+let them be.","O ente querido de seu
+paciente ficou muito
+confuso com suas tentativas
+de expressar empatia.
+
+Tenho certeza de que ele
+conseguirá superar isso
+eventualmente.
+
+
+
+É um momento difícil,
+deixe-o em paz."
