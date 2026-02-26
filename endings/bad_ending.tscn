@@ -176,7 +176,6 @@ visible_ratio = 0.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1135507731]
 stream = ExtResource("3_levno")
 pitch_scale = 0.71
-autoplay = true
 bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1488715651]
