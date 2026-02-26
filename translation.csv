@@ -1,5 +1,5 @@
 keys,en,pt
-SOUND,F11 = Fullscreen. Better with sound!,F11 = Tela cheia. Jogue com som!
+SOUND,Better with sound!,Jogue com som!
 BAD1_1,Um this is awkward...,Como é que eu conto essa
 BAD1_2,I have some news for you.,notícia pra você?
 BAD1_3,Your loved one was in surgery,O seu ente querido
@@ -139,3 +139,4 @@ eventualmente.
 
 É um momento difícil,
 deixe-o em paz."
+FULLSCREEN,Fullscreen,Tela cheia
