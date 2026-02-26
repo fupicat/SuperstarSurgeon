@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b21tkmmxnhj2c"]
+[gd_scene format=3 uid="uid://b21tkmmxnhj2c"]
 
 [ext_resource type="Script" uid="uid://ck71eh3yq1nic" path="res://devil/devil_assigner.gd" id="3_4hqyl"]
 [ext_resource type="Texture2D" uid="uid://dtnxvlpaod0cd" path="res://platforms/blue_short.png" id="3_p60ko"]
@@ -68,174 +68,170 @@ _data = {
 &"RESET": SubResource("Animation_r56lx")
 }
 
-[node name="Level3" type="Node2D" groups=["level"]]
+[node name="Level3" type="Node2D" unique_id=1552737554 groups=["level"]]
 
-[node name="Good" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+[node name="Good" type="Marker2D" parent="." unique_id=368739946 node_paths=PackedStringArray("devil") groups=["good_spawner"]]
 position = Vector2(295, 62)
 gizmo_extents = 35.6
 script = ExtResource("3_4hqyl")
 devil = NodePath("../Devil")
 
-[node name="Good2" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+[node name="Good2" type="Marker2D" parent="." unique_id=1977939215 node_paths=PackedStringArray("devil") groups=["good_spawner"]]
 position = Vector2(838, 454)
 gizmo_extents = 35.6
 script = ExtResource("3_4hqyl")
 devil = NodePath("../Devil2")
 
-[node name="Good3" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+[node name="Good3" type="Marker2D" parent="." unique_id=646808465 node_paths=PackedStringArray("devil") groups=["good_spawner"]]
 position = Vector2(957, 310)
 gizmo_extents = 35.6
 script = ExtResource("3_4hqyl")
 devil = NodePath("../Devil3")
 
-[node name="Good4" type="Marker2D" parent="." node_paths=PackedStringArray("devil") groups=["good_spawner"]]
+[node name="Good4" type="Marker2D" parent="." unique_id=1671288456 node_paths=PackedStringArray("devil") groups=["good_spawner"]]
 position = Vector2(342.5, 410)
 gizmo_extents = 35.6
 script = ExtResource("3_4hqyl")
 devil = NodePath("../Devil4")
 
-[node name="Bad" type="Marker2D" parent="." groups=["bad_spawner"]]
+[node name="Bad" type="Marker2D" parent="." unique_id=1919067958 groups=["bad_spawner"]]
 position = Vector2(183, 267.5)
 gizmo_extents = 35.6
 
-[node name="Bad2" type="Marker2D" parent="." groups=["bad_spawner"]]
+[node name="Bad2" type="Marker2D" parent="." unique_id=1282264575 groups=["bad_spawner"]]
 position = Vector2(352, 216)
 gizmo_extents = 35.6
 
-[node name="Bad3" type="Marker2D" parent="." groups=["bad_spawner"]]
+[node name="Bad3" type="Marker2D" parent="." unique_id=612089549 groups=["bad_spawner"]]
 position = Vector2(584, 235)
 gizmo_extents = 35.6
 
-[node name="Devil" parent="." instance=ExtResource("4_r71pr")]
+[node name="Devil" parent="." unique_id=804300131 instance=ExtResource("4_r71pr")]
 position = Vector2(1407, 574)
 
-[node name="Devil2" parent="." instance=ExtResource("4_r71pr")]
+[node name="Devil2" parent="." unique_id=1316053193 instance=ExtResource("4_r71pr")]
 position = Vector2(-292, 452)
 
-[node name="Devil3" parent="." instance=ExtResource("4_r71pr")]
+[node name="Devil3" parent="." unique_id=1646172063 instance=ExtResource("4_r71pr")]
 position = Vector2(897, -214)
 
-[node name="Devil4" parent="." instance=ExtResource("4_r71pr")]
+[node name="Devil4" parent="." unique_id=1613095725 instance=ExtResource("4_r71pr")]
 position = Vector2(192, -214)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="." unique_id=1622455853]
 position = Vector2(139, 115)
 rotation = 0.785397
 scale = Vector2(1.34074, 1.34074)
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D6" type="StaticBody2D" parent="Node2D" unique_id=1554334892]
 position = Vector2(82.2744, -24.2603)
 physics_material_override = SubResource("PhysicsMaterial_cuayf")
 
-[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D6"]
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D6" unique_id=1989994258]
 modulate = Color(1, 1, 1, 0.466667)
 scale = Vector2(0.0687952, 0.0782863)
 texture = ExtResource("3_p60ko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D6" unique_id=150606056]
 shape = SubResource("RectangleShape2D_3ehs1")
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D7" type="StaticBody2D" parent="Node2D" unique_id=262611454]
 position = Vector2(212.382, -154.368)
 physics_material_override = SubResource("PhysicsMaterial_cuayf")
 
-[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D7"]
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D7" unique_id=394037903]
 modulate = Color(1, 1, 1, 0.466667)
 scale = Vector2(0.0687952, 0.0782863)
 texture = ExtResource("3_p60ko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D7" unique_id=1723787313]
 shape = SubResource("RectangleShape2D_3ehs1")
 
-[node name="StaticBody2D8" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D8" type="StaticBody2D" parent="Node2D" unique_id=1143996554]
 position = Vector2(336.833, -278.818)
 physics_material_override = SubResource("PhysicsMaterial_cuayf")
 
-[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D8"]
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D8" unique_id=534517823]
 modulate = Color(1, 1, 1, 0.466667)
 scale = Vector2(0.0687952, 0.0782863)
 texture = ExtResource("3_p60ko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D8" unique_id=436185758]
 shape = SubResource("RectangleShape2D_3ehs1")
 
-[node name="StaticBody2D9" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D9" type="StaticBody2D" parent="Node2D" unique_id=1016268047]
 position = Vector2(455.627, -397.612)
 physics_material_override = SubResource("PhysicsMaterial_cuayf")
 
-[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D9"]
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D9" unique_id=1495973772]
 modulate = Color(1, 1, 1, 0.466667)
 scale = Vector2(0.0687952, 0.0782863)
 texture = ExtResource("3_p60ko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D9" unique_id=1329491140]
 shape = SubResource("RectangleShape2D_3ehs1")
 
-[node name="StaticBody2D11" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D11" type="StaticBody2D" parent="Node2D" unique_id=1885578092]
 position = Vector2(216.601, -17.2439)
 physics_material_override = SubResource("PhysicsMaterial_cuayf")
 
-[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D11"]
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D11" unique_id=2024003816]
 modulate = Color(1, 1, 1, 0.466667)
 scale = Vector2(0.0687952, 0.0782863)
 texture = ExtResource("3_p60ko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D11" unique_id=1801437090]
 shape = SubResource("RectangleShape2D_3ehs1")
 
-[node name="StaticBody2D12" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D12" type="StaticBody2D" parent="Node2D" unique_id=2006378495]
 position = Vector2(341.052, -141.695)
 physics_material_override = SubResource("PhysicsMaterial_cuayf")
 
-[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D12"]
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D12" unique_id=1384113858]
 modulate = Color(1, 1, 1, 0.466667)
 scale = Vector2(0.0687952, 0.0782863)
 texture = ExtResource("3_p60ko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D12" unique_id=150725723]
 shape = SubResource("RectangleShape2D_3ehs1")
 
-[node name="StaticBody2D13" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D13" type="StaticBody2D" parent="Node2D" unique_id=1682175451]
 position = Vector2(459.846, -260.488)
 physics_material_override = SubResource("PhysicsMaterial_cuayf")
 
-[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D13"]
+[node name="BlueShort" type="Sprite2D" parent="Node2D/StaticBody2D13" unique_id=2093716539]
 modulate = Color(1, 1, 1, 0.466667)
 scale = Vector2(0.0687952, 0.0782863)
 texture = ExtResource("3_p60ko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D13" unique_id=1763768501]
 shape = SubResource("RectangleShape2D_3ehs1")
 
-[node name="Bumper" parent="." instance=ExtResource("4_k6c4y")]
+[node name="Bumper" parent="." unique_id=423238953 instance=ExtResource("4_k6c4y")]
 position = Vector2(1021, 440)
 
-[node name="Node2D2" type="Node2D" parent="."]
+[node name="Node2D2" type="Node2D" parent="." unique_id=729228660]
 position = Vector2(169, 441)
 
-[node name="Bumper2" type="Area2D" parent="Node2D2"]
+[node name="Bumper2" type="Area2D" parent="Node2D2" unique_id=639481577]
 collision_mask = 2
 script = ExtResource("5_0fd8o")
 metadata/_edit_group_ = true
 
-[node name="Root" type="Node2D" parent="Node2D2/Bumper2"]
+[node name="Root" type="Node2D" parent="Node2D2/Bumper2" unique_id=1251399047]
 
-[node name="Sprite" type="Sprite2D" parent="Node2D2/Bumper2/Root"]
+[node name="Sprite" type="Sprite2D" parent="Node2D2/Bumper2/Root" unique_id=937755467]
 position = Vector2(-18, -17)
 scale = Vector2(0.106081, 0.106081)
 texture = ExtResource("6_dmnu2")
 flip_h = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D2/Bumper2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D2/Bumper2" unique_id=936348077]
 position = Vector2(-19, -17)
 polygon = PackedVector2Array(16, -17, 80, 73, -68, 72, -68, -87)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2/Bumper2"]
-libraries = {
-&"": SubResource("AnimationLibrary_c1xq5")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2/Bumper2" unique_id=1384810381]
+libraries/ = SubResource("AnimationLibrary_c1xq5")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D2/Bumper2"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D2/Bumper2" unique_id=66293501]
 volume_db = -11.742
-
-[connection signal="body_entered" from="Node2D2/Bumper2" to="Node2D2/Bumper2" method="_on_body_entered"]

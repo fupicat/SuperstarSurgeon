@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8pqymt83rt1q"]
+[gd_scene format=3 uid="uid://c8pqymt83rt1q"]
 
 [ext_resource type="Texture2D" uid="uid://cpemwwh2ycdef" path="res://balls/ICONE-BOM-SURGINDO-2.png" id="1_w5gko"]
 [ext_resource type="Texture2D" uid="uid://be1y0tl0ah4ce" path="res://balls/ICONE-BOM-SURGINDO-3.png" id="2_70qww"]
 [ext_resource type="Texture2D" uid="uid://b0we73k53hl4y" path="res://balls/ICONE-BOM-SURGINDO-4.png" id="3_uius3"]
 [ext_resource type="Texture2D" uid="uid://b5xmcetjfr4ye" path="res://balls/ICONE-BOM-SURGINDO-5.png" id="4_lc2kg"]
+[ext_resource type="Script" uid="uid://7deol8n6ai5a" path="res://balls/web_export_bs.gd" id="5_qaqhq"]
 [ext_resource type="AudioStream" uid="uid://414ajbqyw11q" path="res://sfx/smoke.wav" id="5_v6i35"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tw5ui"]
@@ -29,17 +30,16 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Root" type="Node2D"]
+[node name="Root" type="Node2D" unique_id=832703886]
 z_index = 1
 
-[node name="Icon" type="AnimatedSprite2D" parent="."]
+[node name="Icon" type="AnimatedSprite2D" parent="." unique_id=474323706]
 scale = Vector2(0.0756757, 0.0756757)
 sprite_frames = SubResource("SpriteFrames_tw5ui")
 autoplay = "default"
+script = ExtResource("5_qaqhq")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=346074145]
 stream = ExtResource("5_v6i35")
 volume_db = -24.0
 autoplay = true
-
-[connection signal="animation_finished" from="Icon" to="." method="queue_free"]

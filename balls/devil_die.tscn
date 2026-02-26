@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhvjwxlukb2ib"]
+[gd_scene format=3 uid="uid://dhvjwxlukb2ib"]
 
 [ext_resource type="Texture2D" uid="uid://b35my4ostiyvq" path="res://devil/DIABINHO-EXPLO-1.png" id="1_p1f2a"]
 [ext_resource type="Texture2D" uid="uid://bokb0jcupn2wn" path="res://devil/DIABINHO-EXPLO-2.png" id="2_ps6qm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dvvsgqejk307n" path="res://devil/DIABINHO-EXPLO-4.png" id="4_y6td7"]
 [ext_resource type="Texture2D" uid="uid://5c1xviolnokj" path="res://devil/DIABINHO-EXPLO-5.png" id="5_h5p6c"]
 [ext_resource type="Texture2D" uid="uid://c4udl3p4wn23n" path="res://devil/DIABINHO-EXPLO-6.png" id="6_2ld23"]
+[ext_resource type="Script" uid="uid://7deol8n6ai5a" path="res://balls/web_export_bs.gd" id="7_bjk62"]
 [ext_resource type="AudioStream" uid="uid://tdwqhcqw7kys" path="res://sfx/whine.wav" id="7_h0bxu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tw5ui"]
@@ -37,17 +38,16 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Root" type="Node2D"]
+[node name="Root" type="Node2D" unique_id=931787289]
 z_index = 1
 
-[node name="Icon" type="AnimatedSprite2D" parent="."]
+[node name="Icon" type="AnimatedSprite2D" parent="." unique_id=942260530]
 scale = Vector2(0.0756757, 0.0756757)
 sprite_frames = SubResource("SpriteFrames_tw5ui")
 autoplay = "default"
+script = ExtResource("7_bjk62")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=135240740]
 stream = ExtResource("7_h0bxu")
 volume_db = -14.666
 autoplay = true
-
-[connection signal="animation_finished" from="Icon" to="." method="queue_free"]

@@ -17,8 +17,10 @@ func _ready() -> void:
 		if good_outcome:
 			good_outcome_total += 1
 			hospital_anim.play("%s_good" % (number + 1))
+			music.good_outcome = true
 		else:
 			hospital_anim.play("%s_bad" % (number + 1))
+			music.good_outcome = false
 		)
 	music.end.connect(func():
 		anim.play("fade_out")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://5l50a10vrido"]
+[gd_scene format=3 uid="uid://5l50a10vrido"]
 
 [ext_resource type="Texture2D" uid="uid://cdlide342n4ck" path="res://platforms/blue_long.png" id="1_gjse6"]
 [ext_resource type="PackedScene" uid="uid://by3e00oqjx70j" path="res://bumpers/bumper_circle.tscn" id="2_giriw"]
@@ -10,105 +10,105 @@ absorbent = true
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d8sd"]
 size = Vector2(819.633, 32)
 
-[node name="Level3" type="Node2D" groups=["level"]]
+[node name="Level3" type="Node2D" unique_id=896510633 groups=["level"]]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=297386306]
 position = Vector2(190, 364)
 rotation = 0.179195
 physics_material_override = SubResource("PhysicsMaterial_3may6")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1794885426]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(-282.838, -1.09814)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="Icon2" type="Sprite2D" parent="StaticBody2D"]
+[node name="Icon2" type="Sprite2D" parent="StaticBody2D" unique_id=699837211]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(-497.233, -0.881409)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="Icon3" type="Sprite2D" parent="StaticBody2D"]
+[node name="Icon3" type="Sprite2D" parent="StaticBody2D" unique_id=269915027]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(146.107, -0.027832)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="Icon4" type="Sprite2D" parent="StaticBody2D"]
+[node name="Icon4" type="Sprite2D" parent="StaticBody2D" unique_id=980072900]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(-68.4661, -0.795288)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=886361595]
 position = Vector2(-159.817, -3.05176e-05)
 shape = SubResource("RectangleShape2D_7d8sd")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1504937616]
 position = Vector2(1298, 262)
 rotation = -0.242181
 physics_material_override = SubResource("PhysicsMaterial_3may6")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D2"]
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2" unique_id=1845524546]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(-282.838, -1.09814)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="Icon2" type="Sprite2D" parent="StaticBody2D2"]
+[node name="Icon2" type="Sprite2D" parent="StaticBody2D2" unique_id=426313361]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(-497.233, -0.881409)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="Icon3" type="Sprite2D" parent="StaticBody2D2"]
+[node name="Icon3" type="Sprite2D" parent="StaticBody2D2" unique_id=111439735]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(146.107, -0.027832)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="Icon4" type="Sprite2D" parent="StaticBody2D2"]
+[node name="Icon4" type="Sprite2D" parent="StaticBody2D2" unique_id=423972012]
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(-68.4661, -0.795288)
 scale = Vector2(0.0896631, 0.0896631)
 texture = ExtResource("1_gjse6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1478960886]
 position = Vector2(-191.228, -0.930893)
 shape = SubResource("RectangleShape2D_7d8sd")
 
-[node name="Bumper" parent="." instance=ExtResource("2_giriw")]
+[node name="Bumper" parent="." unique_id=1222335339 instance=ExtResource("2_giriw")]
 position = Vector2(568, 171)
 
-[node name="Good" type="Marker2D" parent="." groups=["good_spawner"]]
+[node name="Good" type="Marker2D" parent="." unique_id=2038624091 groups=["good_spawner"]]
 position = Vector2(506, 42)
 gizmo_extents = 35.6
 
-[node name="Good2" type="Marker2D" parent="." groups=["good_spawner"]]
+[node name="Good2" type="Marker2D" parent="." unique_id=1060655423 groups=["good_spawner"]]
 position = Vector2(634, 39)
 gizmo_extents = 35.6
 
-[node name="Good3" type="Marker2D" parent="." groups=["good_spawner"]]
+[node name="Good3" type="Marker2D" parent="." unique_id=1988620819 groups=["good_spawner"]]
 position = Vector2(966, 499)
 gizmo_extents = 35.6
 
-[node name="Good4" type="Marker2D" parent="." groups=["good_spawner"]]
+[node name="Good4" type="Marker2D" parent="." unique_id=1654253652 groups=["good_spawner"]]
 position = Vector2(193, 511)
 gizmo_extents = 35.6
 
-[node name="Bad" type="Marker2D" parent="." groups=["bad_spawner"]]
+[node name="Bad" type="Marker2D" parent="." unique_id=291519170 groups=["bad_spawner"]]
 position = Vector2(108, 227)
 gizmo_extents = 35.6
 
-[node name="Bad2" type="Marker2D" parent="." groups=["bad_spawner"]]
+[node name="Bad2" type="Marker2D" parent="." unique_id=885747827 groups=["bad_spawner"]]
 position = Vector2(300, 291)
 gizmo_extents = 35.6
 
-[node name="Bad3" type="Marker2D" parent="." groups=["bad_spawner"]]
+[node name="Bad3" type="Marker2D" parent="." unique_id=2080734766 groups=["bad_spawner"]]
 position = Vector2(799, 295)
 gizmo_extents = 35.6
 
-[node name="Bad4" type="Marker2D" parent="." groups=["bad_spawner"]]
+[node name="Bad4" type="Marker2D" parent="." unique_id=1560213388 groups=["bad_spawner"]]
 position = Vector2(989, 221)
 gizmo_extents = 35.6

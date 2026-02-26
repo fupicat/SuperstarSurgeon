@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Superstar Surgeon: a Sensitive Subject"
@@ -15,7 +19,7 @@ config/name_localized={
 "pt_BR": "Cirurgião 5 Estrelas: um Assunto Sensível"
 }
 run/main_scene="res://menu/menu.tscn"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://menu/fundo.png"
 config/icon="res://icon.png"

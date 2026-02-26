@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://s3qt6ujuwiqr"]
+[gd_scene format=3 uid="uid://s3qt6ujuwiqr"]
 
 [ext_resource type="Script" uid="uid://i5bid0tqgip" path="res://devil/devil.gd" id="1_o1xd7"]
 [ext_resource type="Texture2D" uid="uid://drlwhh7o80us0" path="res://devil/devil_get.png" id="2_2m3yu"]
@@ -38,15 +38,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50ovl"]
 size = Vector2(90, 90)
 
-[node name="Devil" type="Area2D"]
+[node name="Devil" type="Area2D" unique_id=1077576835]
 collision_layer = 2
 script = ExtResource("1_o1xd7")
 speed = 250
 
-[node name="Icon" type="AnimatedSprite2D" parent="."]
+[node name="Icon" type="AnimatedSprite2D" parent="." unique_id=288832606]
 scale = Vector2(0.072973, 0.0729729)
 sprite_frames = SubResource("SpriteFrames_43r5w")
 animation = &"sneak"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=613633153]
 shape = SubResource("RectangleShape2D_50ovl")

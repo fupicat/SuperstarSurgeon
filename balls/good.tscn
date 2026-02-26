@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvsdqttdyo12f"]
+[gd_scene format=3 uid="uid://cvsdqttdyo12f"]
 
 [ext_resource type="Script" uid="uid://byr2wnrcbuxtm" path="res://balls/shootable.gd" id="1_tyd2o"]
 [ext_resource type="Texture2D" uid="uid://7mm33317c1ud" path="res://balls/good.png" id="2_xbxam"]
@@ -103,7 +103,7 @@ _data = {
 &"devil_out": SubResource("Animation_rrfsk")
 }
 
-[node name="Good" type="RigidBody2D" groups=["good"]]
+[node name="Good" type="RigidBody2D" unique_id=431183905 groups=["good"]]
 collision_layer = 2
 collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_y8xnv")
@@ -111,20 +111,18 @@ script = ExtResource("1_tyd2o")
 good = true
 metadata/_edit_group_ = true
 
-[node name="Root" type="Node2D" parent="."]
+[node name="Root" type="Node2D" parent="." unique_id=2075565582]
 
-[node name="Icon" type="Sprite2D" parent="Root"]
+[node name="Icon" type="Sprite2D" parent="Root" unique_id=168000719]
 scale = Vector2(0.0756757, 0.0756757)
 texture = ExtResource("2_xbxam")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1996768933]
 shape = SubResource("CircleShape2D_sk0le")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ecwb4")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=394465079]
+libraries/ = SubResource("AnimationLibrary_ecwb4")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=525776918]
 stream = ExtResource("4_yia76")
 volume_db = -20.903

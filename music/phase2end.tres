@@ -1,0 +1,14 @@
+[gd_resource type="AudioStreamSynchronized" format=3 uid="uid://bjje25lo2h1u4"]
+
+[ext_resource type="AudioStream" uid="uid://cjghkb8jnpjjp" path="res://music/phase2end.ogg" id="1_82h0t"]
+[ext_resource type="AudioStream" uid="uid://c1ryxakwlcl5u" path="res://vocals/bad2.ogg" id="2_d18y8"]
+[ext_resource type="AudioStream" uid="uid://bvi6vcfknsqb3" path="res://vocals/good2.ogg" id="3_ocskx"]
+
+[resource]
+stream_count = 3
+stream_0/stream = ExtResource("1_82h0t")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_d18y8")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_ocskx")
+stream_2/volume = 0.0

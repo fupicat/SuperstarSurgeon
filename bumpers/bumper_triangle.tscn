@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkbubpwgdl1ut"]
+[gd_scene format=3 uid="uid://bkbubpwgdl1ut"]
 
 [ext_resource type="Script" uid="uid://cdrch680ln7dr" path="res://bumpers/bumper.gd" id="1_r1nrj"]
 [ext_resource type="Texture2D" uid="uid://bhefx6rq5rg2p" path="res://bumpers/bumper_triangle_white.png" id="2_3pe2h"]
@@ -50,6 +50,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c1xq5"]
 _data = {
@@ -57,28 +69,24 @@ _data = {
 &"RESET": SubResource("Animation_r56lx")
 }
 
-[node name="Bumper" type="Area2D"]
+[node name="Bumper" type="Area2D" unique_id=710675065]
 collision_mask = 2
 script = ExtResource("1_r1nrj")
 metadata/_edit_group_ = true
 
-[node name="Root" type="Node2D" parent="."]
+[node name="Root" type="Node2D" parent="." unique_id=1064161262]
 
-[node name="Sprite" type="Sprite2D" parent="Root"]
+[node name="Sprite" type="Sprite2D" parent="Root" unique_id=1582674621]
 position = Vector2(-18, -17)
 scale = Vector2(0.106081, 0.106081)
 texture = ExtResource("2_3pe2h")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1298046242]
 position = Vector2(-19, -17)
 polygon = PackedVector2Array(70, -87, 71, 75, -79, 74, -12, -15)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_c1xq5")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1137759856]
+libraries/ = SubResource("AnimationLibrary_c1xq5")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1141652306]
 volume_db = -11.742
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
